@@ -146,6 +146,36 @@ python -m pytest -v
 
 At the time of writing, all 13 authorization policy tests pass.
 
+## Evidence and Test Results
+
+This section demonstrates the practical implementation and testing of the Cloud Authorization Lab through automated tests, manual API requests, and authorization logging.
+
+### 1. Automated Authorization Tests
+
+The project includes 13 automated tests covering role-based permissions, confidential record access, unsupported roles and actions, and default-deny behavior. All 13 tests passed in the recorded test run.
+
+![Automated Authorization Tests](screenshorts/automated-test-results.png)
+
+### 2. Manual API Testing
+
+Manual testing was performed by sending API requests and inspecting the responses. This helps verify how the application handles permitted and denied access according to its authorization policies.
+
+![Manual API Testing](screenshorts/manual-api-testing.png)
+
+### 3. Runtime Authorization Logs
+
+The running application produces log output when API endpoints are accessed. These logs help observe application activity and authorization decisions during testing.
+
+![Runtime Authorization Logs](screenshorts/runtime-authorization-logs.png)
+
+### 4. Authorization Audit Log
+
+Authorization audit entries are stored in `logs/authorization.log`. These entries record allowed and denied authorization decisions, helping with review and troubleshooting.
+
+![Authorization Audit Log](screenshorts/authorization-audit-log.png)
+
+**Note:** This project is an educational lab that runs locally. The screenshots show results observed during testing and do not represent a production deployment or independent security audit.
+
 
 
 \## Security Notes and Limitations
